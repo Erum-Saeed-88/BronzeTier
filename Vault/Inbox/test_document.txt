@@ -1,0 +1,26 @@
+Test Document for AI Employee Processing
+
+This is a sample document dropped into the Inbox folder to test the File System Watcher.
+
+## Purpose
+This document tests the Bronze Tier functionality:
+1. File System Watcher detects the new file
+2. Watcher copies file to Needs_Action with metadata
+3. Orchestrator detects pending items and triggers Claude Code
+4. Claude Code processes the file and moves to Done
+
+## Test Instructions
+1. Ensure filesystem_watcher.py is running
+2. Copy this file to the /Inbox folder
+3. Watch for the file to appear in /Needs_Action with a .md metadata file
+4. Run Claude Code to process the item
+5. Move completed items to /Done
+
+## Expected Behavior
+- File should be detected within 1-2 seconds
+- Metadata file should contain original filename and size
+- Orchestrator should create a Claude prompt
+
+---
+Created: 2026-02-28
+Tier: Bronze
